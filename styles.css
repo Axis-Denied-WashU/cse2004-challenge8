@@ -1,0 +1,122 @@
+:root {
+    --xtilt: 30deg;
+    --ztilt: -20deg;
+    --radius: 180px;
+}
+
+
+
+@keyframes cycle1 {
+    from {
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(0deg) translateZ(var(--radius));
+    }
+    to {
+
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(360deg) translateZ(var(--radius));
+    }
+}
+@keyframes cycle2 {
+    from {
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(calc(1*60deg)) translateZ(var(--radius));
+    }
+    to {
+
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(calc(360deg + 1*60deg)) translateZ(var(--radius));
+    }
+}
+@keyframes cycle3 {
+    from {
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(calc(2*60deg)) translateZ(var(--radius));
+    }
+    to {
+
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(calc(360deg + 2*60deg)) translateZ(var(--radius));
+    }
+}
+@keyframes cycle4 {
+    from {
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(calc(3*60deg)) translateZ(var(--radius));
+    }
+    to {
+
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(calc(360deg + 3*60deg)) translateZ(var(--radius));
+    }
+}
+@keyframes cycle5 {
+    from {
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(calc(4*60deg)) translateZ(var(--radius));
+    }
+    to {
+
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(calc(360deg + 4*60deg)) translateZ(var(--radius));
+    }
+}
+@keyframes cycle6 {
+    from {
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(calc(5*60deg)) translateZ(var(--radius));
+    }
+    to {
+
+        transform: rotateX(var(--xtilt)) rotateZ(var(--ztilt)) rotateY(calc(360deg + 5*60deg)) translateZ(var(--radius));
+    }
+}
+
+main {
+    display: flex;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: conic-gradient(black 0deg 140deg, orange 140deg 160deg, black 160deg 320deg, orange 320deg 340deg, black 290deg 360deg);
+}
+
+
+div#eh {
+    position: absolute;
+    background-color: orange;
+    width:150px;
+    height: 150px;
+    border-radius: 100%;
+}
+div#blackhole {
+    background-image: linear-gradient(rgb(8, 0, 46), rgb(6, 0, 33));
+    display:block;
+    height: 90%;
+    width: 90%;
+    border-radius: 100%;
+    position: relative;
+    left: 5%;
+    top: 5%;
+}
+
+
+ul{
+    list-style-type: none;
+    padding-top: 25%;
+    position: absolute;
+}
+li{
+    transform-origin: center center;
+    position: absolute;
+    color: orange;
+    font-size: large;
+}
+
+li:first-child{
+    animation: cycle1 2s infinite linear;
+}
+li:nth-child(2){
+    animation: cycle2 2s infinite linear;
+}
+li:nth-child(3){
+    animation: cycle3 2s infinite linear;
+}
+li:nth-child(4){
+    animation: cycle4 2s infinite linear;
+}
+li:nth-child(5){
+    animation: cycle5 2s infinite linear;
+}
+li:nth-child(6){
+    animation: cycle6 2s infinite linear;
+}
